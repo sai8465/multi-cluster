@@ -13,3 +13,9 @@ spec:
         name: bitnami
   interval: 1m0s
   releaseName: mumbai-nginx
+  template:
+    spec: 
+      metadata:
+      selecter:
+        replica: 8
+
