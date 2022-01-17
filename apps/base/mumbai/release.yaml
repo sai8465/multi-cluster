@@ -6,8 +6,8 @@ metadata:
 spec:
    chart: nginx
    sourceRef:
-      kind: HelmRepository
-      name: bitnami
+     kind: HelmRepository
+     name: bitnami
    interval: 1m0s
    releaseName: mumbai-nginx
    replicaCount: 8
