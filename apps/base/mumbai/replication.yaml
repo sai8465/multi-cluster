@@ -1,7 +1,16 @@
-apiVersion: helm.toolkit.fluxcd.io/v2beta1
-kind: Deployment  
-metadate:
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    k8s-app: kube-dns
+  annotations:
+    kustomize.toolkit.fluxcd.io/prune: disabled
   name: nginx
+  namespace: mumbai
 spec:
-  replicas:8
+  replicas: 8
+  template:
+    metadata:
+    spec:
+      containers: 80
    
