@@ -1,14 +1,13 @@
----
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: mumbai
+  name: nginx
   namespace: flux-system
 spec:
-  chart: nginx
-    sourceRef:
+   chart: nginx
+   sourceRef:
       kind: HelmRepository
       name: bitnami
-  interval: 1m0s
-  releaseName: mumbai-nginx
-  replicas: 8
+   interval: 1m0s
+   releaseName: mumbai-nginx
+   replicaCount: 8
