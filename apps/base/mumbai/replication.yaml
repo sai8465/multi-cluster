@@ -1,10 +1,7 @@
-apiVersion: apps/v1
-kind: Deployment
-metadata:
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: Deployment  
+metadate:
   name: nginx
-  namespace: mumbai
 spec:
-  replicas: 8
-  selector:
-    matchLabels:
-      app: mumbai-nginx
+  replicas:8
+   
