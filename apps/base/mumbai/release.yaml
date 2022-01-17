@@ -5,6 +5,10 @@ metadata:
   name: mumbai
   namespace: flux-system
 spec:
+  selector:
+     matchlabels:
+       app: mumbai-nginx
+  replicas: 8   
   chart:
     spec:
       chart: nginx
@@ -13,9 +17,4 @@ spec:
         name: bitnami
   interval: 1m0s
   releaseName: mumbai-nginx
-  template:
-    spec: 
-      metadata:
-      selecter:
-        replica: 8
 
