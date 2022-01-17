@@ -4,10 +4,10 @@ metadata:
   name: nginx
   namespace: flux-system
 spec:
-   chart: nginx
+   chart: bitnami
    sourceRef:
      kind: HelmRepository
-     name: bitnami
+     name: nginx
    interval: 1m0s
    releaseName: mumbai-nginx
    replicaCount: 8
