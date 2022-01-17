@@ -5,9 +5,6 @@ metadata:
   name: mumbai
   namespace: flux-system
 spec:
-  selector:
-     matchlabels:
-       app: mumbai-nginx
   replicas: 8   
   chart:
     spec:
