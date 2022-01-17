@@ -1,16 +1,19 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: v1
+kind: ReplicationController
 metadata:
-  labels:
-    k8s-app: kube-dns
-  annotations:
-    kustomize.toolkit.fluxcd.io/prune: disabled
   name: nginx
-  namespace: mumbai
 spec:
-  replicas: 8
+  replicas: 3
+  selector:
+    app: nginx
   template:
     metadata:
+      name: nginx
+      labels:
+        app: nginx
     spec:
-      containers: 80
-   
+      containers:
+      - name: nginx
+        image: nginx
+        ports:
+        - containerPort: 80
