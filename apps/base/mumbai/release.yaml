@@ -12,8 +12,8 @@ spec:
       spec:  
         chart: bitnami
         sourceRef:
-           kind: HelmRepository
-           name: nginx
+          kind: HelmRepository
+          name: nginx
   interval: 1m0s
   releaseName: mumbai-nginx
   spec:
